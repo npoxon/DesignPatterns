@@ -1,10 +1,9 @@
-using DesignPatterns.Creational;
-using DesignPatterns.Creational.AbstractFactory;
 using DesignPatterns.Creational.Builder;
+using DesignPatterns.Creational.Helpers;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.Tests
+namespace DesignPatterns.Creational.Tests
 {
     public class BuilderTests
     {

@@ -1,9 +1,9 @@
-using DesignPatterns.Common;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Helpers;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.Tests
+namespace DesignPatterns.Structural.Tests
 {
     public class AdapterTests
     {
@@ -11,8 +11,8 @@ namespace DesignPatterns.Tests
         public void AdapterTest()
         {
             var adaptee = new Adaptee();
-            var target = new Adapter(adaptee);
-            target.GetRequest().Should().Be(Text.SpecificText);
+            var target = new Adapter.Adapter(adaptee);
+            target.GetRequest().Should().Be(StructuralText.SpecificText);
         }
     }
 }

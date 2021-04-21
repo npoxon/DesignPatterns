@@ -1,7 +1,8 @@
 namespace DesignPatterns.Structural.Adapter
 {
-    public class ITarget
+    // The Target defines the domain-specific interface used by the client code.
+    public interface ITarget
     {
-        
+        string GetRequest();
     }
 }

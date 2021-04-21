@@ -1,3 +1,5 @@
+using DesignPatterns.Creational.Helpers;
+
 namespace DesignPatterns.Creational.AbstractFactory
 {
     public class ConcreteProductB1 : IAbstractProductB

@@ -1,3 +1,5 @@
+using DesignPatterns.Structural.Helpers;
+
 namespace DesignPatterns.Structural.Facade
 {
     // The Subsystem can accept requests either from the facade or client
@@ -5,14 +7,14 @@ namespace DesignPatterns.Structural.Facade
     // client, and it's not a part of the Subsystem.
     public class SubSystem1
     {
-        public string operation1()
+        public string Operation1()
         {
-            return "Subsystem1: Ready!\n";
+            return StructuralText.SubSystem1Ready;
         }
 
-        public string operationN()
+        public string OperationN()
         {
-            return "Subsystem1: Go!\n";
+            return StructuralText.SubSystem1Go;
         }
     }
 }

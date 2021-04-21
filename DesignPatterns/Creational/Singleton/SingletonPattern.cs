@@ -1,27 +1,27 @@
-namespace DesignPatterns.Creational.SingletonPattern
+namespace DesignPatterns.Creational.Singleton
 {
-    public class Singleton // The Singleton class defines the `GetInstance` method that serves as an
+    public class SingletonPattern // The Singleton class defines the `GetInstance` method that serves as an
         // alternative to constructor and lets clients access the same instance of
         // this class over and over.
         
     {
         // The Singleton's constructor should always be private to prevent
         // direct construction calls with the `new` operator.
-        private Singleton() { }
+        private SingletonPattern() { }
 
         // The Singleton's instance is stored in a static field. There there are
         // multiple ways to initialize this field, all of them have various pros
         // and cons. In this example we'll show the simplest of these ways,
         // which, however, doesn't work really well in multithreaded program.
-        private static Singleton _instance;
+        private static SingletonPattern _instance;
 
         // This is the static method that controls the access to the singleton
         // instance. On the first run, it creates a singleton object and places
         // it into the static field. On subsequent runs, it returns the client
         // existing object stored in the static field.
-        public static Singleton GetInstance()
+        public static SingletonPattern GetInstance()
         {
-            return _instance ??= new Singleton();
+            return _instance ??= new SingletonPattern();
         }
 
         // Finally, any singleton should define some business logic, which can

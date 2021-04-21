@@ -1,4 +1,4 @@
-namespace DesignPatterns.Creational
+namespace DesignPatterns.Creational.Helpers
 {
     public static class Text
     {

@@ -3,7 +3,7 @@ using DesignPatterns.Creational.Prototype;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.Tests
+namespace DesignPatterns.Creational.Tests
 {
     public class PrototypeTests
     {

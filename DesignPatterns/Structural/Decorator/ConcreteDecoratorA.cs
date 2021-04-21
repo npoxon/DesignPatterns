@@ -1,5 +1,9 @@
+using DesignPatterns.Structural.Helpers;
+
 namespace DesignPatterns.Structural.Decorator
 {
+    // Concrete Decorators call the wrapped object and alter its result in some
+    // way.
     public class ConcreteDecoratorA : Decorator
     {
         public ConcreteDecoratorA(Component comp) : base(comp)
@@ -11,7 +15,7 @@ namespace DesignPatterns.Structural.Decorator
         // extension of decorator classes.
         public override string Operation()
         {
-            return $"ConcreteDecoratorA({base.Operation()})";
+            return StructuralText.ConcreteDecoratorA + base.Operation();
         }
     }
 }

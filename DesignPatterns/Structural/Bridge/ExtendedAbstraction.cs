@@ -1,3 +1,5 @@
+using DesignPatterns.Structural.Helpers;
+
 namespace DesignPatterns.Structural.Bridge
 {
     public class ExtendedAbstraction : Abstraction

@@ -1,9 +1,9 @@
-using DesignPatterns.Creational;
 using DesignPatterns.Creational.AbstractFactory;
+using DesignPatterns.Creational.Helpers;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.Tests
+namespace DesignPatterns.Creational.Tests
 {
     // The client code works with factories and products only through abstract
     // types: AbstractFactory and AbstractProduct. This lets you pass any

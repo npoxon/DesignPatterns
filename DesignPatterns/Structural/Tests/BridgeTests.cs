@@ -1,9 +1,9 @@
-using DesignPatterns.Common;
 using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Helpers;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace DesignPatterns.Tests
+namespace DesignPatterns.Structural.Tests
 {
     public class BridgeTests
     {
@@ -15,10 +15,10 @@ namespace DesignPatterns.Tests
             // The client code should be able to work with any pre-configured
             // abstraction-implementation combination.
             var abstractionA = new Abstraction(new ConcreteImplementationA());
-            client.ClientCode(abstractionA).Should().Be(Text.BaseOperation + Text.TheResultFromPlatformA);
+            client.ClientCode(abstractionA).Should().Be(StructuralText.BaseOperation + StructuralText.TheResultFromPlatformA);
             
             var abstractionB = new ExtendedAbstraction(new ConcreteImplementationB());
-            client.ClientCode(abstractionB).Should().Be(Text.ExtendedOperation + Text.TheResultFromPlatformB);
+            client.ClientCode(abstractionB).Should().Be(StructuralText.ExtendedOperation + StructuralText.TheResultFromPlatformB);
         }
     }
 }

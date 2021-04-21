@@ -1,4 +1,4 @@
-namespace DesignPatterns.Creational.SingletonPattern
+namespace DesignPatterns.Creational.Singleton
 {
     // This Singleton implementation is called "double check lock". It is safe
     // in multithreaded environment and provides lazy initialization for the
