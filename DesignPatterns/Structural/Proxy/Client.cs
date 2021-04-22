@@ -10,9 +10,9 @@ namespace DesignPatterns.Structural.Proxy
         public static string ClientCode(ISubject subject)
         {
             // ...
-            
+
             return subject.Request();
-            
+
             // ...
         }
     }

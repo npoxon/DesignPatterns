@@ -7,7 +7,7 @@ namespace DesignPatterns.Structural.Bridge
         public ExtendedAbstraction(IImplementation implementation) : base(implementation)
         {
         }
-        
+
         public override string Operation()
         {
             return StructuralText.ExtendedOperation + Implementation.OperationImplementation();

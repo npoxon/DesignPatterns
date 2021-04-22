@@ -21,15 +21,17 @@ namespace DesignPatterns.Creational.Tests
             ClientMethod(new ConcreteFactory1());
             _productA.AddingFunction(1).Should().Be(firstExpectedResult);
             _productB.UsefulFunctionB().Should().Be(Text.ResultB1);
-            _productB.AnotherUsefulFunctionB(_productA).Should().Be(Text.WithTheResultFromTheFirstFunction(firstExpectedResult));
+            _productB.AnotherUsefulFunctionB(_productA).Should()
+                .Be(Text.WithTheResultFromTheFirstFunction(firstExpectedResult));
 
             const int secondExpectedResult = 3;
             ClientMethod(new ConcreteFactory2());
             _productA.AddingFunction(1).Should().Be(secondExpectedResult);
             _productB.UsefulFunctionB().Should().Be(Text.ResultB2);
-            _productB.AnotherUsefulFunctionB(_productA).Should().Be(Text.WithTheResultFromTheSecondFunction(secondExpectedResult));
+            _productB.AnotherUsefulFunctionB(_productA).Should()
+                .Be(Text.WithTheResultFromTheSecondFunction(secondExpectedResult));
         }
-        
+
         private static void ClientMethod(IAbstractFactory factory)
         {
             _productA = factory.CreateProductA();

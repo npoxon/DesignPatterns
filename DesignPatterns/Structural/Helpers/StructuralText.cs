@@ -10,8 +10,10 @@ namespace DesignPatterns.Structural.Helpers
         public const string ConcreteDecoratorB = "ConcreteDecoratorB";
         public const string FacadeSubInitialise = "Facade initializes subsystems: ";
         public const string FacadeOrdersAction = "Facade orders subsystems to perform the action: ";
+
         public const string FacadeResult =
             "Facade initializes subsystems: Subsystem1: Ready!Subsystem2: Ready!Facade orders subsystems to perform the action: Subsystem1: Go!Subsystem2: Fire!";
+
         public const string ExtendedOperation = "Extended operation with ";
         public const string Leaf = "Leaf";
         public const string ProxyHandlingRequest = "Proxy: Handling Request.";

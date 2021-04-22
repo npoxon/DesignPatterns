@@ -6,8 +6,8 @@ namespace DesignPatterns.Creational.Prototype
     {
         public int Age;
         public DateTime BirthDate;
-        public string Name;
         public IdInfo IdInfo;
+        public string Name;
 
         public Person ShallowCopy()
         {

@@ -15,7 +15,7 @@ namespace DesignPatterns.Creational.Tests
             const string originalName = "Jack Daniels";
             const int originalIdNumber = 666;
             var originalId = new IdInfo(originalIdNumber);
-            
+
             var p1 = new Person
             {
                 Age = originalAge,
@@ -32,12 +32,12 @@ namespace DesignPatterns.Creational.Tests
             // Original values of p1, p2, p3
             p1.Should().BeEquivalentTo(p2);
             p2.Should().BeEquivalentTo(p3);
-            
+
             const int newAge = 32;
             var newBirthDate = Convert.ToDateTime("1900-01-01");
             const string newName = "Frank";
             const int newIdNumber = 7878;
-            
+
             // Change the value of p1 properties and display the values of p1,
             // p2 and p3.
             p1.Age = newAge;
@@ -49,13 +49,13 @@ namespace DesignPatterns.Creational.Tests
             p1.BirthDate.Should().Be(newBirthDate);
             p1.Name.Should().Be(newName);
             p1.IdInfo.IdNumber.Should().Be(newIdNumber);
-            
+
             // p2 reference values have changed
             p2.Age.Should().Be(originalAge);
             p2.BirthDate.Should().Be(originalBirthDate);
             p2.Name.Should().Be(originalName);
             p2.IdInfo.IdNumber.Should().Be(newIdNumber);
-            
+
             // p3 reference values have not changed
             p3.Age.Should().Be(originalAge);
             p3.BirthDate.Should().Be(originalBirthDate);

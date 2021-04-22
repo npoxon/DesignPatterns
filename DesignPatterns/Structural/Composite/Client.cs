@@ -15,11 +15,8 @@ namespace DesignPatterns.Structural.Composite
         // classes.
         public static string ClientCode2(Component component1, Component component2)
         {
-            if (component1.IsComposite())
-            {
-                component1.Add(component2);
-            }
-            
+            if (component1.IsComposite()) component1.Add(component2);
+
             return component1.Operation();
         }
     }

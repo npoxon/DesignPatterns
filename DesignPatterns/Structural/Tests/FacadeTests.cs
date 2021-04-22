@@ -18,6 +18,6 @@ namespace DesignPatterns.Structural.Tests
             var subsystem2 = new SubSystem2();
             var facade = new Facade.Facade(subsystem1, subsystem2);
             Client.ClientCode(facade).Should().Be(StructuralText.FacadeResult);
-        } 
+        }
     }
 }

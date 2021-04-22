@@ -6,8 +6,6 @@ namespace DesignPatterns.Structural.Composite
     // complex objects of a composition.
     public abstract class Component
     {
-        protected Component() { }
-
         // The base Component may implement some default behavior or leave it to
         // concrete classes (by declaring the method containing the behavior as
         // "abstract").

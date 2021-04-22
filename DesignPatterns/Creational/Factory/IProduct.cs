@@ -6,7 +6,7 @@ namespace DesignPatterns.Creational.Factory
     {
         int Operation(int value);
     }
-    
+
     // Concrete Products provide various implementations of the Product
     // interface.
 }

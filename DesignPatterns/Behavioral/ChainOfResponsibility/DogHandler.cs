@@ -6,7 +6,9 @@ namespace DesignPatterns.Behavioral.ChainOfResponsibility
     {
         public override object Handle(object request)
         {
-            return request as string == BehavioralText.Meatball ? BehavioralText.Dog((string) request) : base.Handle(request);
+            return request as string == BehavioralText.Meatball
+                ? BehavioralText.Dog((string) request)
+                : base.Handle(request);
         }
     }
 }

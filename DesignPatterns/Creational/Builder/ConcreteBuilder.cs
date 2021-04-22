@@ -5,35 +5,35 @@ namespace DesignPatterns.Creational.Builder
     public class ConcreteBuilder : IBuilder
     {
         private Product _product = new Product();
-        
+
         // A fresh builder instance should contain a blank product object, which
         // is used in further assembly.
         public ConcreteBuilder()
         {
             Reset();
         }
-        
-        private void Reset()
-        {
-            _product = new Product();
-        }
-        
+
         // All production steps work with the same product instance.
         public void BuildPartA()
         {
             _product.Add(Text.PartA);
         }
-        
+
         public void BuildPartB()
         {
             _product.Add(Text.PartB);
         }
-        
+
         public void BuildPartC()
         {
             _product.Add(Text.PartC);
         }
-        
+
+        private void Reset()
+        {
+            _product = new Product();
+        }
+
         // Concrete Builders are supposed to provide their own methods for
         // retrieving results. That's because various types of builders may
         // create entirely different products that don't follow the same

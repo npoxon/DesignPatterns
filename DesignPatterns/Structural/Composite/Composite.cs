@@ -5,7 +5,7 @@ namespace DesignPatterns.Structural.Composite
     public class Composite : Component
     {
         private readonly List<Component> _children = new List<Component>();
-        
+
         public override void Add(Component component)
         {
             _children.Add(component);
@@ -29,13 +29,10 @@ namespace DesignPatterns.Structural.Composite
             foreach (var component in _children)
             {
                 result += component.Operation();
-                if (i != _children.Count - 1)
-                {
-                    result += "+";
-                }
+                if (i != _children.Count - 1) result += "+";
                 i++;
             }
-            
+
             return result + ")";
         }
     }

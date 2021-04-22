@@ -11,9 +11,10 @@ namespace DesignPatterns.Behavioral.ChainOfResponsibility
         // most cases, it is not even aware that the handler is part of a chain.
         public static IEnumerable<string?> ClientCode(AbstractHandler handler)
         {
-            return (from food in new List<string> {BehavioralText.Nut, BehavioralText.Banana, BehavioralText.Cheese} 
-                let result = handler.Handle(food) select result != null 
-                    ? result.ToString() 
+            return (from food in new List<string> {BehavioralText.Nut, BehavioralText.Banana, BehavioralText.Cheese}
+                let result = handler.Handle(food)
+                select result != null
+                    ? result.ToString()
                     : BehavioralText.Untouched(food)).ToList();
         }
     }

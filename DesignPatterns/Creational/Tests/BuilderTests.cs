@@ -16,7 +16,7 @@ namespace DesignPatterns.Creational.Tests
             var director = new Director();
             var builder = new ConcreteBuilder();
             director.Builder = builder;
-            
+
             // Create a standard basic product
             director.BuildMinimalViableProduct();
             builder.GetProduct().ListParts().Should().ContainInOrder(Text.PartA);

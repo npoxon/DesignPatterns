@@ -14,17 +14,14 @@ namespace DesignPatterns.Structural.Flyweight
 
         public FlyweightFactory(params Car[] args)
         {
-            foreach (var elem in args)
-            {
-                _flyweights.Add(new Tuple<Flyweight, string>(new Flyweight(elem), GetKey(elem)));
-            }
+            foreach (var elem in args) _flyweights.Add(new Tuple<Flyweight, string>(new Flyweight(elem), GetKey(elem)));
         }
 
         // Returns a Flyweight's string hash for a given state.
         private static string GetKey(Car key)
         {
             var elements = new List<string> {key.Model, key.Color, key.Company};
-            
+
             if (key.Owner != null && key.Number != null)
             {
                 elements.Add(key.Number);
@@ -42,9 +39,7 @@ namespace DesignPatterns.Structural.Flyweight
             var key = GetKey(sharedState);
 
             if (_flyweights.All(t => t.Item2 != key))
-            {
                 _flyweights.Add(new Tuple<Flyweight, string>(new Flyweight(sharedState), key));
-            }
 
             return _flyweights.FirstOrDefault(t => t.Item2 == key)?.Item1;
         }

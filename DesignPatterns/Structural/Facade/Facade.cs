@@ -18,7 +18,7 @@ namespace DesignPatterns.Structural.Facade
             _subsystem1 = subsystem1;
             _subsystem2 = subsystem2;
         }
-        
+
         // The Facade's methods are convenient shortcuts to the sophisticated
         // functionality of the subsystems. However, clients get only to a
         // fraction of a subsystem's capabilities.

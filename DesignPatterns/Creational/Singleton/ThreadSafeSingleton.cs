@@ -5,22 +5,25 @@ namespace DesignPatterns.Creational.Singleton
     // Singleton object.
     public class ThreadSafeSingleton
     {
-        private ThreadSafeSingleton()
-        {
-        }
-        
         private static ThreadSafeSingleton _instance;
-        
+
         // We now have a lock object that will be used to synchronize threads
         // during first access to the Singleton.
         private static readonly object _lock = new object();
-        
+
+        private ThreadSafeSingleton()
+        {
+        }
+
+        // We'll use this property to prove that our Singleton really works.
+        public string Value { get; set; }
+
         public static ThreadSafeSingleton GetInstance(string value)
         {
             // This conditional is needed to prevent threads stumbling over the
             // lock once the instance is ready.
             if (_instance != null) return _instance;
-            
+
             // Now, imagine that the program has just been launched. Since
             // there's no Singleton instance yet, multiple threads can
             // simultaneously pass the previous conditional and reach this
@@ -37,10 +40,8 @@ namespace DesignPatterns.Creational.Singleton
                 // object.
                 _instance ??= new ThreadSafeSingleton {Value = value};
             }
+
             return _instance;
         }
-
-        // We'll use this property to prove that our Singleton really works.
-        public string Value { get; set; }
     }
 }

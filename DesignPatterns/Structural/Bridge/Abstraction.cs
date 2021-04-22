@@ -14,13 +14,13 @@ namespace DesignPatterns.Structural.Bridge
         {
             Implementation = implementation;
         }
-        
+
         public virtual string Operation()
         {
             return StructuralText.BaseOperation + Implementation.OperationImplementation();
         }
     }
-    
+
     // You can extend the Abstraction without changing the Implementation
     // classes.
 }
