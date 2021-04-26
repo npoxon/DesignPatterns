@@ -26,5 +26,10 @@ namespace DesignPatterns.Behavioral.Helpers
         {
             return $"{food} was left untouched.";
         }
+        
+        public const string ConcreteStateA = "ConcreteStateA handles request2.";
+        public const string ConcreteStateB = "ConcreteStateB handles request1.";
+        public const string TransitionToA = "Transition to A";
+        public const string TransitionToB = "Transition to B";
     }
 }
